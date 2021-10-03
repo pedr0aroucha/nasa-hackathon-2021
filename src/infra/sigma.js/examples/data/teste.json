@@ -1,0 +1,49 @@
+{
+	"nodes": [
+		{
+			"id": "n0",
+			"label": "A node",
+			"type": "image",
+			"url": "https://github.com/pedr0aroucha.png",
+			"x": 1.15,
+			"y": 1.15,
+			"size": 3,
+			"color": "#617db4",
+			"category": "Apps"
+		},
+		{
+			"id": "n1",
+			"label": "Another node",
+			"type": "image",
+			"url": "img/img1.png",
+			"x": 1.5,
+			"y": 1,
+			"size": 2,
+			"color": "#617db4",
+			"category": "Apps"
+		},
+		{
+			"id": "n2",
+			"label": "And a last one",
+			"type": "image",
+			"url": "https://github.com/pedr0aroucha.png",
+			"x": 1,
+			"y": 0.85,
+			"size": 2,
+			"color": "#617db4",
+			"category": "Apps"
+		},
+		{
+			"id": "n3",
+			"label": "And a last one",
+			"type": "image",
+			"url": "https://github.com/pedr0aroucha.png",
+			"x": 1,
+			"y": 1,
+			"size": 2,
+			"color": "#617db4",
+			"category": "Sun"
+		}
+	],
+	"edges": []
+}

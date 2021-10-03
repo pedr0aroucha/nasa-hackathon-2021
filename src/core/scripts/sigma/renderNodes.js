@@ -111,15 +111,19 @@ export function renderNodes(jsonUrl) {
 		function (s) {
 			filter = new sigma.plugins.filter(s);
 
-			console.log(s, s.graph.nodes());
+			// Bind the events:
+			s.bind("clickNode", function (e) {
+				const labelString = String(e.data.node.label)
+					.toLowerCase()
+					.replace(" ", "-")
+					.replace("/", "-");
 
-			// s.refresh();
+				window.history.pushState(null, null, `?filter=${labelString}`);
+			});
 
 			updatePane(s.graph, filter);
 
 			function applyCategoryFilter(e) {
-				console.log(e.target.value);
-
 				var c = e.target[e.target.selectedIndex].value;
 				filter
 					.undo("node-category")

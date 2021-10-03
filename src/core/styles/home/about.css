@@ -1,0 +1,14 @@
+#about {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	height: 100vh;
+
+	background-color: black;
+}
+
+#about .about-container h3 {
+	color: white;
+}

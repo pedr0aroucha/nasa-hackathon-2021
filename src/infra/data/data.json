@@ -7,7 +7,7 @@
 			"x": 1.05,
 			"y": 1.05,
 			"size": 10,
-			"color": "#617db4",
+			"color": "#99d98c",
 			"category": "Aerospace"
 		},
 		{
@@ -17,7 +17,7 @@
 			"x": 1.15,
 			"y": 1.15,
 			"size": 10,
-			"color": "#617db4",
+			"color": "#99d98c",
 			"category": "Applied Science"
 		},
 		{
@@ -27,7 +27,7 @@
 			"x": 1.25,
 			"y": 1.25,
 			"size": 10,
-			"color": "#617db4",
+			"color": "#99d98c",
 			"category": "Apps"
 		},
 		{
@@ -37,7 +37,7 @@
 			"x": 1.35,
 			"y": 1.35,
 			"size": 10,
-			"color": "#617db4",
+			"color": "#99d98c",
 			"category": "Earth Science"
 		},
 		{
@@ -47,7 +47,7 @@
 			"x": 1.45,
 			"y": 1.45,
 			"size": 10,
-			"color": "#617db4",
+			"color": "#99d98c",
 			"category": "Management/Operations"
 		},
 		{
@@ -57,7 +57,7 @@
 			"x": 1.55,
 			"y": 1.55,
 			"size": 10,
-			"color": "#617db4",
+			"color": "#99d98c",
 			"category": "Raw Data"
 		},
 		{
@@ -67,7 +67,7 @@
 			"x": 1.65,
 			"y": 1.65,
 			"size": 10,
-			"color": "#617db4",
+			"color": "#99d98c",
 			"category": "Software"
 		},
 		{
@@ -77,7 +77,7 @@
 			"x": 1.75,
 			"y": 1.75,
 			"size": 10,
-			"color": "#617db4",
+			"color": "#99d98c",
 			"category": "Space Science"
 		}
 	],

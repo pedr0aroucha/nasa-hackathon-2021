@@ -1,6 +1,7 @@
 @import url(./home/landing.css);
 @import url(./home/about.css);
 @import url(./pages/categories.css);
+@import url(./loading.css);
 
 * {
 	color: #333;

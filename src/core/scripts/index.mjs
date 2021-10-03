@@ -8,4 +8,8 @@ window.onload = async () => {
 	categories.nodes.forEach((node) => {
 		graph.renderNode(node);
 	});
+
+	categories.edges.forEach((edge) => {
+		graph.renderEdge(edge);
+	});
 };

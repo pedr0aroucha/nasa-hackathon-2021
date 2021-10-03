@@ -1,0 +1,41 @@
+#categories #input-search-container {
+	position: absolute;
+
+	z-index: 999;
+
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: rgba(0, 0, 0, 0.25);
+
+	padding: 1em 0;
+}
+
+#categories #input-search-container input,
+#categories #input-search-container button {
+	border: none;
+
+	font-size: 1.15em;
+}
+
+#categories #input-search-container input {
+	padding: 0.5em;
+
+	margin-right: 0.5em;
+
+	font-size: 1.15em;
+
+	outline: none;
+}
+
+#categories #input-search-container button {
+	background-color: black;
+	color: white;
+
+	padding: 0.5em 1em;
+
+	cursor: pointer;
+}

@@ -1,6 +1,6 @@
-import { Handles } from "./Handles.js";
+import { Handlers } from "./Handlers.js";
 
-export async function Graph(degree = "category") {
+export async function Graph() {
 	function _init() {
 		return new Promise((resolve) => {
 			sigma.parsers.json(
@@ -11,11 +11,16 @@ export async function Graph(degree = "category") {
 						defaultLabelColor: "#fff",
 						defaultLabelSize: 20,
 						minNodeSize: 10,
-						maxNodeSize: 10,
+						maxNodeSize: 15,
 					},
 				},
 				function (s) {
-					Handles().clickNode(s, degree);
+					const handlers = Handlers();
+
+					handlers.clickNode(s);
+					handlers.doubleClickNode(s);
+					handlers.overNode(s);
+					handlers.whenSearchingInWriting(s);
 
 					resolve(s);
 				},
@@ -43,5 +48,6 @@ export async function Graph(degree = "category") {
 	return {
 		renderNode,
 		renderEdge,
+		_init,
 	};
 }

@@ -1,9 +1,18 @@
 export const categories = {
 	nodes: [
 		{
+			id: "n",
+			label: "Octopus",
+			not_clickable: true,
+			x: 1.55,
+			y: 0.8,
+			size: 10,
+			color: "#99d98c",
+			category: "Aerospace",
+		},
+		{
 			id: "n0",
 			label: "Aerospace",
-			image: "https://github.com/pedr0aroucha.png",
 			x: 1.05,
 			y: 1.05,
 			size: 10,
@@ -23,7 +32,6 @@ export const categories = {
 		{
 			id: "n2",
 			label: "Apps",
-			image: "https://github.com/pedr0aroucha.png",
 			x: 1.25,
 			y: 1.25,
 			size: 10,
@@ -33,7 +41,6 @@ export const categories = {
 		{
 			id: "n3",
 			label: "Earth Science",
-			image: "https://github.com/pedr0aroucha.png",
 			x: 1.35,
 			y: 1.35,
 			size: 10,
@@ -43,9 +50,8 @@ export const categories = {
 		{
 			id: "n4",
 			label: "Management/Operations",
-			image: "https://github.com/pedr0aroucha.png",
-			x: 1.45,
-			y: 1.45,
+			x: 1.65,
+			y: 1.35,
 			size: 10,
 			color: "#99d98c",
 			category: "Management/Operations",
@@ -53,9 +59,8 @@ export const categories = {
 		{
 			id: "n5",
 			label: "Raw Data",
-			image: "https://github.com/pedr0aroucha.png",
-			x: 1.55,
-			y: 1.55,
+			x: 1.75,
+			y: 1.25,
 			size: 10,
 			color: "#99d98c",
 			category: "Raw Data",
@@ -63,9 +68,8 @@ export const categories = {
 		{
 			id: "n6",
 			label: "Software",
-			image: "https://github.com/pedr0aroucha.png",
-			x: 1.65,
-			y: 1.65,
+			x: 1.85,
+			y: 1.15,
 			size: 10,
 			color: "#99d98c",
 			category: "Software",
@@ -73,12 +77,61 @@ export const categories = {
 		{
 			id: "n7",
 			label: "Space Science",
-			image: "https://github.com/pedr0aroucha.png",
-			x: 1.75,
-			y: 1.75,
+			x: 1.95,
+			y: 1.05,
 			size: 10,
 			color: "#99d98c",
 			category: "Space Science",
+		},
+	],
+	edges: [
+		{
+			id: "n0",
+			source: "n0",
+			target: "n",
+			type: "arrow",
+		},
+		{
+			id: "n1",
+			source: "n1",
+			target: "n",
+			type: "arrow",
+		},
+		{
+			id: "n2",
+			source: "n2",
+			target: "n",
+			type: "arrow",
+		},
+		{
+			id: "n3",
+			source: "n3",
+			target: "n",
+			type: "arrow",
+		},
+		{
+			id: "n4",
+			source: "n4",
+			target: "n",
+			type: "arrow",
+		},
+		{
+			id: "n5",
+			source: "n5",
+			target: "n",
+			type: "arrow",
+		},
+		{
+			id: "n6",
+			source: "n6",
+			target: "n",
+			type: "arrow",
+		},
+		{
+			id: "n7",
+			source: "n7",
+			target: "n",
+			type: "arrow",
 		},
 	],
 };

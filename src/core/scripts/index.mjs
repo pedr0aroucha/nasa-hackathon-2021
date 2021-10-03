@@ -1,5 +1,11 @@
-import { renderNodes } from "./sigma/renderNodes.js";
+import { Graph } from "./sigma/Graph.js";
 
-window.onload = () => {
-	renderNodes(`${window.location.origin}/categories`);
+import { categories } from "../../infra/data/categories.js";
+
+window.onload = async () => {
+	const graph = await Graph();
+
+	categories.nodes.forEach((node) => {
+		graph.renderNode(node);
+	});
 };

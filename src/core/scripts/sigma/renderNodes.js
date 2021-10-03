@@ -104,16 +104,22 @@ export function renderNodes(jsonUrl) {
 		{
 			container: "graph-container",
 			settings: {
-				edgeColor: "default",
-				defaultEdgeColor: "#ccc",
+				defaultLabelColor: "#fff",
+				defaultLabelSize: 20,
 			},
 		},
 		function (s) {
 			filter = new sigma.plugins.filter(s);
 
+			console.log(s, s.graph.nodes());
+
+			// s.refresh();
+
 			updatePane(s.graph, filter);
 
 			function applyCategoryFilter(e) {
+				console.log(e.target.value);
+
 				var c = e.target[e.target.selectedIndex].value;
 				filter
 					.undo("node-category")

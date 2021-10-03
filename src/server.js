@@ -12,10 +12,8 @@ app.use(cors());
 
 app.use(express.static(resolve(__dirname)));
 
-app.get("/json", (req, res) => {
-	const jsonFile = require("./infra/data/data.json");
-
-	return res.json(jsonFile);
-});
+app.get("/categories", (req, res) =>
+	res.json(require("./infra/data/categories.json")),
+);
 
 app.listen(PORT, () => console.log(`Running on port ${PORT}`));

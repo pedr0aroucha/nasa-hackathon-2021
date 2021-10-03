@@ -6,16 +6,27 @@ import { Loading } from "../animations/Loading.js";
 
 function clickNode(sigmaCanva) {
 	sigmaCanva.bind("clickNode", async function (event) {
+		const node = event.data.node;
+
+		const categoryLabel = node.label;
+
 		const selectedNode = document.getElementById("selected-node");
-		const categoryLabel = event.data.node.label;
 
-		if (event.data.node.not_clickable) return;
+		if (node.not_clickable) return;
 
-		selectedNode.innerText = categoryLabel;
+		selectedNode.innerHTML = `
+			<div id="buttons-options" >
+				<h5>${categoryLabel}</h5>
+				<button id="see-more-related-items" >See more related items</button>
+				${node.is_from_the_main_category ? "" : "<button>See about this item</button>"}
+				<button id="go-back" onclick="window.location.replace(window.origin + window.location.pathname)" >Go back</button>
+			</div>
+		`;
 
-		selectedNode.onclick = async () => {
-			renderSubNodes(sigmaCanva, categoryLabel, selectedNode);
-		};
+		document.getElementById("see-more-related-items").onclick =
+			async () => {
+				renderSubNodes(sigmaCanva, categoryLabel, selectedNode);
+			};
 	});
 }
 

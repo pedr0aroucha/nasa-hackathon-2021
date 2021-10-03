@@ -9,6 +9,7 @@ export const categories = {
 			size: 10,
 			color: "#99d98c",
 			category: "Aerospace",
+			is_from_the_main_category: true,
 		},
 		{
 			id: "n0",
@@ -18,6 +19,7 @@ export const categories = {
 			size: 10,
 			color: "#99d98c",
 			category: "Aerospace",
+			is_from_the_main_category: true,
 		},
 		{
 			id: "n1",
@@ -28,6 +30,7 @@ export const categories = {
 			size: 10,
 			color: "#99d98c",
 			category: "Applied Science",
+			is_from_the_main_category: true,
 		},
 		{
 			id: "n2",
@@ -37,6 +40,7 @@ export const categories = {
 			size: 10,
 			color: "#99d98c",
 			category: "Apps",
+			is_from_the_main_category: true,
 		},
 		{
 			id: "n3",
@@ -46,6 +50,7 @@ export const categories = {
 			size: 10,
 			color: "#99d98c",
 			category: "Earth Science",
+			is_from_the_main_category: true,
 		},
 		{
 			id: "n4",
@@ -55,6 +60,7 @@ export const categories = {
 			size: 10,
 			color: "#99d98c",
 			category: "Management/Operations",
+			is_from_the_main_category: true,
 		},
 		{
 			id: "n5",
@@ -64,6 +70,7 @@ export const categories = {
 			size: 10,
 			color: "#99d98c",
 			category: "Raw Data",
+			is_from_the_main_category: true,
 		},
 		{
 			id: "n6",
@@ -73,6 +80,7 @@ export const categories = {
 			size: 10,
 			color: "#99d98c",
 			category: "Software",
+			is_from_the_main_category: true,
 		},
 		{
 			id: "n7",
@@ -82,6 +90,7 @@ export const categories = {
 			size: 10,
 			color: "#99d98c",
 			category: "Space Science",
+			is_from_the_main_category: true,
 		},
 	],
 	edges: [

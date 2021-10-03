@@ -11,7 +11,7 @@
 
 	padding: 1em 0;
 
-	background-color: rgba(0, 0, 0, 0.25);
+	background-color: rgba(0, 0, 0, 0.5);
 
 	bottom: 0;
 
@@ -20,4 +20,44 @@
 	cursor: pointer;
 
 	text-align: center;
+}
+
+#buttons-options {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#buttons-options h5 {
+	margin-bottom: 0.5em;
+	padding-bottom: 0.15em;
+
+	color: white;
+
+	border-bottom: 0.1em solid;
+}
+
+#buttons-options button {
+	margin-bottom: 0.5em;
+
+	background-color: black;
+
+	color: white;
+
+	padding: 0.5em 1em;
+
+	border: none;
+
+	cursor: pointer;
+
+	width: 20em;
+
+	font-size: 0.5em;
+
+	border-bottom: 0.1em solid transparent;
+}
+
+#buttons-options button:hover {
+	border-bottom: 0.1em solid white;
 }

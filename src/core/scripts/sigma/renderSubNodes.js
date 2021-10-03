@@ -79,8 +79,8 @@ export async function renderSubNodes(sigmaCanva, categoryLabel, selectedNode) {
 	sigmaCanva.refresh();
 	loading.stop();
 
-	selectedNode.innerText = "Voltar";
-	selectedNode.onclick = () => {
-		window.location.replace(window.origin + window.location.pathname);
-	};
+	selectedNode.innerHTML = `
+	<div id="buttons-options" >
+		<button id="go-back" onclick="window.location.replace(window.origin + window.location.pathname)" >Go back</button>
+	</div>`;
 }

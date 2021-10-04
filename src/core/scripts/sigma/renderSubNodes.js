@@ -91,7 +91,7 @@ export async function renderSubNodes(
 		imagesAndVideos.content?.collection?.items.forEach((media) => {
 			const id = media.data[0].nasa_id;
 			const label = "🎬 " + media.data[0].title;
-			const link = media.href;
+			const link = media.links[0].href;
 
 			nodes.push({
 				id,

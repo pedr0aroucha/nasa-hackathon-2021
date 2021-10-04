@@ -9,6 +9,7 @@ function clickNode(sigmaCanva) {
 		const node = event.data.node;
 
 		const categoryLabel = node.label;
+		const category = node.category;
 
 		const selectedNode = document.getElementById("selected-node");
 
@@ -18,14 +19,24 @@ function clickNode(sigmaCanva) {
 			<div id="buttons-options" >
 				<h5>${categoryLabel}</h5>
 				<button id="see-more-related-items" >See more related items</button>
-				${node.is_from_the_main_category ? "" : "<button>See about this item</button>"}
+
+		${
+			node.is_from_the_main_category || !node.link
+				? ""
+				: `<a href="${node.link}" target="_blank" >See about this item</a>`
+		}
 				<button id="go-back" onclick="window.location.replace(window.origin + window.location.pathname)" >Go back</button>
 			</div>
 		`;
 
 		document.getElementById("see-more-related-items").onclick =
 			async () => {
-				renderSubNodes(sigmaCanva, categoryLabel, selectedNode);
+				renderSubNodes(
+					sigmaCanva,
+					category,
+					categoryLabel,
+					selectedNode,
+				);
 			};
 	});
 }

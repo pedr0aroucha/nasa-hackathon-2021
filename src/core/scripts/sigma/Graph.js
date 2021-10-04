@@ -10,7 +10,7 @@ export async function Graph() {
 					settings: {
 						defaultLabelColor: "#fff",
 						defaultLabelSize: 20,
-						minNodeSize: 10,
+						minNodeSize: 5,
 						maxNodeSize: 15,
 					},
 				},

@@ -17,8 +17,6 @@
 
 	color: white;
 
-	cursor: pointer;
-
 	text-align: center;
 }
 
@@ -38,6 +36,7 @@
 	border-bottom: 0.1em solid;
 }
 
+#buttons-options a,
 #buttons-options button {
 	margin-bottom: 0.5em;
 
@@ -56,8 +55,11 @@
 	font-size: 0.5em;
 
 	border-bottom: 0.1em solid transparent;
+
+	text-decoration: none;
 }
 
+#buttons-options a:hover,
 #buttons-options button:hover {
 	border-bottom: 0.1em solid white;
 }

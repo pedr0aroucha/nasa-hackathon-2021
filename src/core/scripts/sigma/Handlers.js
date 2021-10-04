@@ -82,17 +82,55 @@ function whenSearchingInWriting(sigmaCanva) {
 		const imagesAndVideos = await search.searchByImagesAndVideos(
 			categoryString,
 		);
-
-		if (terms.content)
+		if (terms?.content?.result?.results)
 			terms.content.result.results.forEach((term) => {
+				const id = term.id;
+				const label = "📃 " + (term.title || "Untitled");
+				const link = term.url;
+
+				if (!term.url) console.log(term);
+
 				nodes.push({
-					id: term.id,
-					label: term.title,
-					image: "https://github.com/pedr0aroucha.png",
-					category: categoryLabel,
+					id,
+					label,
+					category: "",
+					link,
+					type: "",
 				});
 			});
 
+		if (words.content?.hits?.hits)
+			words.content.hits.hits.forEach((word) => {
+				const id = word._id;
+				const label =
+					"📃 " +
+					(word._source["Project Title"] ||
+						word._source["Study Title"] ||
+						word._source["Study Publication Title"]);
+				const link = word._source["Project Link"];
+
+				nodes.push({
+					id,
+					label,
+					category: "",
+					link,
+					type: "",
+				});
+			});
+
+		if (imagesAndVideos.content?.collection?.items)
+			imagesAndVideos.content?.collection?.items.forEach((media) => {
+				const id = media.data[0].nasa_id;
+				const label = "🎬 " + media.data[0].title;
+				const link = media.links ? media.links[0].href : "";
+
+				nodes.push({
+					id,
+					label,
+					category: "",
+					link,
+				});
+			});
 		nodes.forEach((node, index) => {
 			node.y = 0.5 + index / 10;
 			node.x = 0.5;

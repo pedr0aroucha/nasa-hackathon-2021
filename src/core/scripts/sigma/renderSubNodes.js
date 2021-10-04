@@ -48,8 +48,9 @@ export async function renderSubNodes(
 	if (terms?.content?.result?.results)
 		terms.content.result.results.forEach((term) => {
 			const id = term.id;
-			const label = "📃 " + term.title;
+			const label = "📃 " + (term.title || "Untitled");
 			const link = term.url;
+
 			nodes.push({
 				id,
 				label,
@@ -69,8 +70,13 @@ export async function renderSubNodes(
 	if (words.content?.hits?.hits)
 		words.content.hits.hits.forEach((word) => {
 			const id = word._id;
-			const label = "📃 " + word._source["Study Publication Title"];
+			const label =
+				"📃 " +
+				(word._source["Project Title"] ||
+					word._source["Study Title"] ||
+					word._source["Study Publication Title"]);
 			const link = word._source["Project Link"];
+
 			nodes.push({
 				id,
 				label,
@@ -91,7 +97,7 @@ export async function renderSubNodes(
 		imagesAndVideos.content?.collection?.items.forEach((media) => {
 			const id = media.data[0].nasa_id;
 			const label = "🎬 " + media.data[0].title;
-			const link = media.links[0].href;
+			const link = media.links ? media.links[0].href : "";
 
 			nodes.push({
 				id,
